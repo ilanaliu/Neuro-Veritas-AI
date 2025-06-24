@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>NEURO VERITAS AI</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+        <noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/images/favicon.ico') }}" />
+    </head>
+    <body class="is-preload">
+
+        <!-- Wrapper -->
+            <div id="wrapper" class="fade-in">
+
+                <div id="intro">
+				<h1>Our Team</h1>
+				<p>Our team is a small but passionate group of students and mentors working together at the intersection of technology, healthcare, and education. 
+					With support from experienced researchers and professors, we combine our diverse skills—from coding and data analysis to clinical insight and design—to develop innovative tools that make a real-world impact. 
+					We believe in using technology to make science more accessible and meaningful for communities everywhere.</p>
+				<ul class="actions">
+					<li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+				</ul>
+			</div>
+
+				<!-- Header -->
+					<header id="header">
+						<a href="{{ url_for('home') }}" class="logo">Neuro Veritas AI</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+                            <li><a href="{{ url_for('home') }}">About Us</a></li>
+                            <li><a href="{{ url_for('research') }}">Our Research</a></li>
+                            <li class="active"><a href="{{ url_for('team') }}">Our Team</a></li>
+                        </ul>
+						<ul class="icons">
+							<li><a href="https://x.com/IlanaLiu_" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.instagram.com/ilanaliu_/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://github.com/ilanaliu" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1> Makers of<br />
+									the Future</h1>
+								</header>
+                                <h3>Ilana Liu</h3>
+                                <p><span class="image left"><img src="{{ url_for('static', filename='assets/images/IMG_7696.jpg') }}" alt="" /></span>Hi there! My name is Ilana Liu, and I’m a junior at North Haven High School with a strong passion for biomedical engineering and data science. As a first-generation Asian American student, I’m deeply engaged in STEM through academic research, dual enrollment in advanced college courses like Multivariable Calculus and Applied Data Science, and by founding a town-wide STEM outreach club to inspire younger students. I’ve conducted neuroscience research under a Yale professor. In addition, I’ve volunteered extensively at Yale New Haven Hospital. Beyond academics, I’m a competitive fencer, math team leader, musician, and committed volunteer tutor. My long-term goal is to pursue a dual degree in Biomedical Engineering and Finance to drive innovation in healthcare while shaping global economic strategy.</p>
+								 <h3>Minh Nguyen</h3>
+                                <p><span class="image right"><img src="{{ url_for('static', filename='assets/images/IMG_5288.jpg') }}" alt="" /></span>Hello! My name is Minh Nguyen, and I am a rising senior at the North Carolina School of Science and Mathematics. I delve deeply into Machine Learning research coupled with other fields in biology and computer science, such as game design and protein prediction. I’m also deeply passionate about various STEM fields, including mathematics - where I’ve placed in the top ten multiple times in international competitions - competitive programming, through my participation in USACO and other contests, and robotics, where I’ve competed in FIRST Robotics and contributed to winning the Impact Award at a local event. Outside the classroom, I have participated in Varsity Tennis for three years, volunteered by teaching English to underprivileged Vietnamese children, and program games. Beyond high school, I want to pursue a degree in Machine Learning combined with another (undecided) major to contribute to society through research and the industry.</p>
+								</header>
+							</section>
+						</div>
+                <!-- Footer -->
+                    <footer id="footer">
+                        <section>
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdj3VbN8lJ497BTBnOVcLnZoAP3AxVIS0-NDa_Eruv3HxaDqg/viewform?embedded=true"
+                            style="width: 100%; max-width: 640px; height: 756px; border: none;" 
+                            frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                        </section>
+                        <section class="split contact">
+                            <section>
+                                <h3>Phone</h3>
+                                <p><a href="tel:+14752024517">(475)-202-4517</a></p>
+                            </section>
+                            <section>
+                                <h3>Email</h3>
+                                <p><a href="mailto:ilanaliu@neuroveritasai.com">ilanaliu@neuroveritasai.com</a></p>
+                            </section>
+                            <section>
+                                <h3>Socials</h3>
+                                <ul class="icons alt">
+                                    <li><a href="https://x.com/IlanaLiu_" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                    <li><a href="https://www.instagram.com/ilanaliu_/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                    <li><a href="https://github.com/ilanaliu" class="icon brands fa-github"><span class="label">GitHub</span></a></li>		
+                                </ul>
+                            </section>
+                        </section>
+                    </footer>
+
+                <!-- Copyright -->
+                    <div id="copyright">
+                        <ul><li>Made by Ilana Liu NHHS '26</li>
+                    </div>
+
+            </div>
+
+        <!-- Scripts -->
+            <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+            <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+    </body>
+</html>
