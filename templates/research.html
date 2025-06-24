@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>OUR RESEARCH - Neuro Veritas AI</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+        <noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
+    </head>
+    <body class="is-preload">
+
+        <!-- Wrapper -->
+            <div id="wrapper" class="fade-in">
+
+                <!-- Intro -->
+                <div id="intro">
+                    <h1>Our Research</h1>
+                    <p>Our research at Neuro Veritas AI started with a goal to create a tool that could help detect early signs of memory loss through speech, no matter the language someone speaks. We began by creating basic logic testing to study dementia initially, researching how dementia can show up during speech-related logic testing. Later on,  we study how memory-related conditions like dementia show up in speech patterns(tone, mode, etc) and explore ways to use artificial intelligence to recognize those signs. After gathering voice samples in different languages and preparing the data, we will build a model that listens for subtle changes in how people speak. The project will combine science, technology, and global accessibility to support early intervention and improve brain health worldwide.
+                    <ul class="actions">
+                        <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+                    </ul>
+                </div>
+                <!-- Nav -->
+                    <nav id="nav">
+                        <ul class="links">
+                            <li><a href="{{ url_for('team') }}">About Us</a></li>
+                            <li class="active"><a href="{{ url_for('research') }}">Our Research</a></li>
+                            <li><a href="{{ url_for('team') }}">Our Team</a></li>
+                        </ul>
+                        <ul class="icons">
+                            <li><a href="https://x.com/IlanaLiu_" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="https://www.instagram.com/ilanaliu_/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                            <li><a href="https://github.com/ilanaliu" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </nav>
+
+                <!-- Main -->
+                    <div id="main">
+
+                        <!-- Post -->
+                            <section class="post">
+                                 <header class="major">
+                                    <span class="date">April 20, 2025</span>
+                                    <h1>Research Paper is Under Construction :]<br />
+                                    For now test out our scanning machine! version 1.0!</h1>
+                                    <p>“Research is to see what everybody else has seen, and to think what nobody else has thought.” <br>
+                                        — Albert Szent-Györgyi</p>
+                                </header>
+                                <div style="margin: 1.5em 0;">
+                                    <button id="recordBtn" type="button">Start Recording</button>
+                                    <button id="stopBtn" type="button" disabled>Stop Recording</button>
+                                    <audio id="audioPlayback" controls style="display:none;"></audio>
+                                </div>
+                                <!-- Progress Bar -->
+                                <div id="progressContainer" style="display:none; margin-bottom:1em;">
+                                    <label id="progressLabel">Processing...</label>
+                                    <div style="background:#eee; border-radius:8px; overflow:hidden; height:20px; width:100%; max-width:400px;">
+                                        <div id="progressBar" style="background:#4caf50; width:0%; height:100%; transition:width 0.3s;"></div>
+                                    </div>
+                                </div>
+                                <!-- Record/Upload/Transcribe/Scan Form -->
+                                <form id="uploadForm" method="POST" enctype="multipart/form-data" style="margin-bottom:2em;"<form id="uploadForm" method="POST" enctype="multipart/form-data" style="margin-bottom:2em;" onsubmit="showProgressBar()">
+                                    <label><b>Upload WAV audio (or record above):</b></label><br>
+                                    <input type="file" id="audiofile" name="audiofile" accept=".wav" required><br><br>
+                                    <label><b>Reference Text (optional):</b></label><br>
+                                    <textarea name="reference" rows="4" cols="60">{{ real_text or '' }}</textarea><br><br>
+                                    <button type="submit" class="button primary">Transcribe & Scan</button>
+                                </form>
+
+                                {% with messages = get_flashed_messages(with_categories=true) %}
+                                    {% if messages %}
+                                        <ul>
+                                        {% for category, message in messages %}
+                                        <li class="{{ category }}">{{ message }}</li>
+                                        {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                {% endwith %}
+
+                                {% if transcription %}
+                                    <h3>Transcription:</h3>
+                                    <pre>{{ transcription }}</pre>
+                                    <a href="{{ url_for('download_upload', filename=audio_filename) }}">Download Audio</a>
+                                {% endif %}
+                                {% if scan_result %}
+                                    <div class="scan-report">
+                                        <h3>Scan Result:</h3>
+                                        <pre>{{ scan_result }}</pre>
+                                        {% if scan_filename %}
+                                            <a href="{{ url_for('download_scan', filename=scan_filename) }}">Download Scan Report</a>
+                                        {% endif %}
+                                    </div>
+                                {% endif %}
+                            </section>
+                    </div>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <section>
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdj3VbN8lJ497BTBnOVcLnZoAP3AxVIS0-NDa_Eruv3HxaDqg/viewform?embedded=true"
+                            style="width: 100%; max-width: 640px; height: 756px; border: none;" 
+                            frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    </section>
+                    <section class="split contact">
+                        <section>
+                            <h3>Phone</h3>
+                            <p><a href="tel:+14752024517">(475)-202-4517</a></p>
+                        </section>
+                        <section>
+                            <h3>Email</h3>
+                            <p><a href="mailto:ilanaliu@neuroveritasai.com">ilanaliu@neuroveritasai.com</a></p>
+                        </section>
+                        <section>
+                            <h3>Socials</h3>
+                            <ul class="icons alt">
+                                <li><a href="https://x.com/IlanaLiu_" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                <li><a href="https://www.instagram.com/ilanaliu_/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                <li><a href="https://github.com/ilanaliu" class="icon brands fa-github"><span class="label">GitHub</span></a></li>	
+                            </ul>
+                        </section>
+                    </section>
+                </footer>
+
+                <!-- Copyright -->
+                    <div id="copyright">
+                        <ul><li>Made by Ilana Liu NHHS '26</li>
+                    </div>
+
+            </div>
+
+        <!-- Scripts -->
+            <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+            <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+            <script src="{{ url_for('static', filename='assets/js/recorder.js') }}"></script>
+            <script src="{{ url_for('static', filename='assets/js/progress.js') }}"></script>
+    </body>
+</html>

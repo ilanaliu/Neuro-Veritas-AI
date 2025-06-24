@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>NEURO VERITAS AI</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+        <noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/images/favicon.ico') }}" />
+    </head>
+    <body class="is-preload">
+
+        <!-- Wrapper -->
+            <div id="wrapper" class="fade-in">
+
+                <!-- Intro -->
+                    <div id="intro">
+                        <h1>Neuro Veritas<br />
+                        AI</h1>
+                        <p>Neuro Veritas AI is a student-founded tech startup focused on developing AI-driven speech analysis and logic testing tools to detect early signs of dementia across multiple languages. By combining linguistic patterns and logic testing, the group aims to revolutionize early diagnosis and cognitive health monitoring through accessible, non-invasive technology.</p>
+                        <ul class="actions">
+                            <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+                        </ul>
+                    </div>
+
+                <!-- Header -->
+                    <header id="header">
+                        <a class="logo">Neuro Veritas</a>
+                    </header>
+
+                <!-- Nav -->
+                    <nav id="nav">
+                        <ul class="links">
+                            <li class="active"><a href="{{ url_for('home') }}">About Us</a></li>
+                            <li><a href="{{ url_for('research') }}">Our Research</a></li>
+                            <li><a href="{{ url_for('team') }}">Our Team</a></li>
+                        </ul>
+                        <ul class="icons">
+                            <li><a href="https://x.com/IlanaLiu_" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="https://www.instagram.com/ilanaliu_/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                            <li><a href="https://github.com/ilanaliu" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </nav>
+
+                <!-- Main -->
+                    <div id="main">
+
+                        <!-- Featured Post -->
+                            <article class="post featured">
+                                <header class="major">
+                                    <h2>Our Mission</h2>
+                                    <p>At Neuro Veritas AI, our mission is to advance early detection of dementia through research in AI-driven speech analysis. We are dedicated to developing multilingual models that can recognize subtle shifts in tone and linguistic patterns associated with cognitive decline well before clinical symptoms become evident.</p>
+                                </header>
+                                <a class="image main"><img src="{{ url_for('static', filename='assets/images/istockphoto-937894966-612x612.jpg') }}" alt="" /></a>
+                                <ul class="actions special">
+                                    <li><a href="{{ url_for('mission') }}" class="button large">Full Story</a></li>
+                                </ul>
+                            </article>
+                    </div>
+
+                <!-- Footer -->
+                    <footer id="footer">
+                        <section>
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdj3VbN8lJ497BTBnOVcLnZoAP3AxVIS0-NDa_Eruv3HxaDqg/viewform?embedded=true"
+                            style="width: 100%; max-width: 640px; height: 756px; border: none;" 
+                            frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                        </section>
+                        <section class="split contact">
+                            <section>
+                                <h3>Phone</h3>
+                                <p><a href="tel:+14752024517">(475)-202-4517</a></p>
+                            </section>
+                            <section>
+                                <h3>Email</h3>
+                                <p><a href="mailto:ilanaliu@neuroveritasai.com">ilanaliu@neuroveritasai.com</a></p>
+                            </section>
+                            <section>
+                                <h3>Socials</h3>
+                                <ul class="icons alt">
+                                    <li><a href="https://x.com/IlanaLiu_" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                    <li><a href="https://www.instagram.com/ilanaliu_/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                    <li><a href="https://github.com/ilanaliu" class="icon brands fa-github"><span class="label">GitHub</span></a></li>		
+                                </ul>
+                            </section>
+                        </section>
+                    </footer>
+
+                <!-- Copyright -->
+                    <div id="copyright">
+                        <ul><li>Made by Ilana Liu NHHS '26</li>
+                    </div>
+
+            </div>
+
+        <!-- Scripts -->
+            <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+            <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+    </body>
+</html>
